@@ -1,0 +1,57 @@
+        canvas { 
+            border: 1px solid black; 
+            max-width: 100%; 
+            touch-action: none; 
+        }
+        body { 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            height: 100vh; 
+            background: #2a3f2a; /* Более мягкий лесной фон */
+        }
+        #ui { 
+            color: #d9b38c; /* Теплый кремовый для текста */
+            font-family: Arial; 
+            margin-top: 10px; 
+            text-align: center; 
+        }
+        #inventoryButton { 
+            padding: 5px 10px; 
+            background: #5a3c2a; /* Спокойный коричневый */
+            cursor: pointer; 
+        }
+        #inventoryMenu { 
+            display: none; 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            background: #4a2c1f; 
+            padding: 10px; 
+            border: 1px solid #6b4e31; 
+            max-height: 80vh; 
+            overflow-y: auto; 
+            width: 80%; 
+            max-width: 400px; 
+        }
+        .inventoryItem { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 5px; 
+            background: #5a3c2a; 
+            margin: 5px 0; 
+        }
+        .inventoryItem button { 
+            margin-left: 5px; 
+            padding: 2px 5px; 
+            background: #6b4e31; 
+            border: none; 
+            color: #d9b38c; 
+            cursor: pointer; 
+        }
+        .equipped { 
+            border: 2px solid #ff9900; 
+        }
