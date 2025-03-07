@@ -370,14 +370,12 @@
             if (foes.length === 0 && !isTransitioning) {
                 isTransitioning = true; // Устанавливаем флаг, чтобы предотвратить повторное срабатывание
                 spawnSparks();
-                alert("All foes vanquished! Entering next den...");
                 setTimeout(() => {
                     generateDen();
                 }, sparkDuration);
             }
 
             if (fox.spirit <= 0) {
-                alert("The fox has fallen! Restarting the hunt...");
                 generateDen();
                 fox.spirit = fox.baseSpirit;
                 fox.claws = fox.baseClaws;
@@ -401,7 +399,6 @@
                 fox.baseSpirit += 20;
                 fox.baseClaws += 5;
                 fox.spirit = fox.baseSpirit;
-                alert(`Rank up! You are now rank ${fox.rank}. Spirit and Claws increased!`);
                 updateFoxStats();
             }
         }
@@ -456,11 +453,9 @@
                     fox.stash.splice(index, 1);
                 } else {
                     if (treasure.type === "weapon" && fox.equipped.some(i => i.type === "weapon")) {
-                        alert("A fox can only wield one charm at a time!");
                         return;
                     }
                     if (treasure.type === "armor" && fox.equipped.some(i => i.type === "armor")) {
-                        alert("A fox can only wear one cloak at a time!");
                         return;
                     }
                     fox.equipped.push(treasure);
